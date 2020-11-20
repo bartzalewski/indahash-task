@@ -1,4 +1,16 @@
-# indaHash Task
+<p align="center">
+  <img src="https://i.imgur.com/I9ohv2p.jpg" width="100" alt="indaHash logo" />
+</p>
+
+<h1 align="center">
+  indaHash Task - Swiper App
+</h1>
+
+<p align="center">
+  This is a project of a swiper app, created for indaHash.
+</p>
+
+![demo](https://i.imgur.com/alRQN99.png)
 
 ## Installation
 
