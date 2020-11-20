@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { pageData } from '../../constants/constants';
 
 const H1 = styled.h1`
   font-size: 60pt;
@@ -11,5 +12,7 @@ const H1 = styled.h1`
 `;
 
 export default function Title() {
-  return <H1>Meet our team</H1>;
+  const { title } = pageData;
+
+  return <H1>{title.title}</H1>;
 }

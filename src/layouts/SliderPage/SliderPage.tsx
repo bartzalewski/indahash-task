@@ -5,6 +5,7 @@ import SwiperCore, { Navigation } from 'swiper';
 import bgSlide from '../../images/bg-slide.png';
 import Slider from '../../components/Slider/Slider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { pageData } from '../../constants/constants';
 
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
@@ -48,6 +49,8 @@ interface Props {
 }
 
 const SliderPage: FC<Props> = ({ setShowSlider, initialNumber }) => {
+  const { users } = pageData;
+
   return (
     <Container>
       <FontAwesomeIcon
@@ -62,43 +65,34 @@ const SliderPage: FC<Props> = ({ setShowSlider, initialNumber }) => {
         navigation
       >
         <SwiperSlide>
-          <Slider name="Basia Sołtysińska" position="Founder" />
+          <Slider name={users[0].name} position={users[0].position} />
         </SwiperSlide>
         <SwiperSlide>
-          <Slider name="Włas Chorowiec" position="Founder" />
+          <Slider name={users[1].name} position={users[1].position} />
         </SwiperSlide>
         <SwiperSlide>
-          <Slider name="Edyta Leśniewska" position="Head of Human Resources" />
+          <Slider name={users[2].name} position={users[2].position} />
         </SwiperSlide>
         <SwiperSlide>
-          <Slider name="Joanna Pawluk" position="Chief Growth Officer (CGO)" />
+          <Slider name={users[3].name} position={users[3].position} />
         </SwiperSlide>
         <SwiperSlide>
-          <Slider name="David Saunders" position="Business Development" />
+          <Slider name={users[4].name} position={users[4].position} />
         </SwiperSlide>
         <SwiperSlide>
-          <Slider
-            name="Adam Eldridge"
-            position="Business Development Director US"
-          />
+          <Slider name={users[5].name} position={users[5].position} />
         </SwiperSlide>
         <SwiperSlide>
-          <Slider
-            name="Maha Mahda"
-            position="Chief Business Development Officer (CBDO)"
-          />
+          <Slider name={users[6].name} position={users[6].position} />
         </SwiperSlide>
         <SwiperSlide>
-          <Slider
-            name="Elżbieta Kamińska"
-            position="International Client Service Manager"
-          />
+          <Slider name={users[7].name} position={users[7].position} />
         </SwiperSlide>
         <SwiperSlide>
-          <Slider name="Karolina Makuch" position="Creation Manager" />
+          <Slider name={users[8].name} position={users[8].position} />
         </SwiperSlide>
         <SwiperSlide>
-          <Slider name="Kamil Bolek" position="Head of Communication" />
+          <Slider name={users[9].name} position={users[9].position} />
         </SwiperSlide>
       </Swiper>
     </Container>

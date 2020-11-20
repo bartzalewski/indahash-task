@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import MailCircle from '../MailCircle/MailCircle';
+import { pageData } from '../../constants/constants';
 
 const Wrapper = styled.div`
   text-align: center;
@@ -56,22 +57,26 @@ const Card: FC<Props> = ({
   setShowSlider,
   setInitialNumber,
   initialNumber,
-}) => (
-  <Wrapper>
-    <MailCircle email={email} />
-    <Image
-      src={img}
-      alt={name}
-      onClick={() => {
-        setInitialNumber(initialNumber);
-        setShowSlider(true);
-      }}
-      title="Zobacz więcej"
-    />
-    <Name>{name}</Name>
-    <Position>{position}</Position>
-    <Location>{location}</Location>
-  </Wrapper>
-);
+}) => {
+  const { card } = pageData;
+
+  return (
+    <Wrapper>
+      <MailCircle email={email} />
+      <Image
+        src={img}
+        alt={name}
+        onClick={() => {
+          setInitialNumber(initialNumber);
+          setShowSlider(true);
+        }}
+        title={card.title}
+      />
+      <Name>{name}</Name>
+      <Position>{position}</Position>
+      <Location>{location}</Location>
+    </Wrapper>
+  );
+};
 
 export default Card;

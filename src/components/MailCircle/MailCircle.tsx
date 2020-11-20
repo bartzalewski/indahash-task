@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { pageData } from '../../constants/constants';
 
 const Circle = styled.div`
   background: #452e76;
@@ -31,9 +32,11 @@ interface Props {
 }
 
 const MailCircle: FC<Props> = ({ email }) => {
+  const { mailCircle } = pageData;
+
   return (
     <a href={`mailto:${email}`}>
-      <Circle title="Napisz wiadomość!">
+      <Circle title={mailCircle.title}>
         <FontAwesomeIcon icon="envelope" />
       </Circle>
     </a>
