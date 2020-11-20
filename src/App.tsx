@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import GlobalStyle from './theme/globalStyle';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTimes, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import ChoosePage from './layouts/ChoosePage';
+import SliderPage from './layouts/SliderPage';
+
+library.add(faTimes, faEnvelope);
+
+const Container = styled.div``;
 
 function App() {
+  const [showSlider, setShowSlider] = useState<boolean>(false);
+  const [initialNumber, setInitialNumber] = useState<number>(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <GlobalStyle />
+      {showSlider ? (
+        <SliderPage
+          setShowSlider={setShowSlider}
+          initialNumber={initialNumber}
+        />
+      ) : (
+        <ChoosePage
+          setShowSlider={setShowSlider}
+          setInitialNumber={setInitialNumber}
+          initialNumber={initialNumber}
+        />
+      )}
+    </Container>
   );
 }
 
