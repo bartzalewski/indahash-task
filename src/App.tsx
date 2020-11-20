@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import GlobalStyle from './theme/globalStyle';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTimes, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import ChoosePage from './layouts/ChoosePage';
-import SliderPage from './layouts/SliderPage';
+import ChoosePage from './layouts/ChoosePage/ChoosePage';
+import SliderPage from './layouts/SliderPage/SliderPage';
 
 library.add(faTimes, faEnvelope);
 

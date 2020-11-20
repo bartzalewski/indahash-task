@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import MailCircle from './MailCircle';
+import MailCircle from '../MailCircle/MailCircle';
 
 const Wrapper = styled.div`
   text-align: center;
@@ -42,8 +42,8 @@ interface Props {
   position: string;
   location: string;
   email: string;
-  setShowSlider: any;
-  setInitialNumber: any;
+  setShowSlider: Function;
+  setInitialNumber: Function;
   initialNumber: number;
 }
 

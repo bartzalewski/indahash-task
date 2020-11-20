@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
-import bgSlide from '../images/bg-slide.png';
-import Slider from '../components/Slider';
+import bgSlide from '../../images/bg-slide.png';
+import Slider from '../../components/Slider/Slider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import 'swiper/swiper.scss';
@@ -33,25 +33,17 @@ const Container = styled.div`
     right: 0;
     top: 0;
     margin: 30px;
-  }
+    transition: 0.2s ease-out;
 
-  .svg-back {
-    left: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-    margin-left: 30px;
-  }
-
-  .svg-next {
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-    margin-right: 30px;
+    &:hover {
+      color: #f44336;
+      transition: 0.2s ease-out;
+    }
   }
 `;
 
 interface Props {
-  setShowSlider: any;
+  setShowSlider: Function;
   initialNumber: number;
 }
 

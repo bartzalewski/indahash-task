@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import Title from '../components/Title';
-import Card from '../components/Card';
+import Title from '../../components/Title/Title';
+import Card from '../../components/Card/Card';
 
-import bg from '../images/bg.png';
-import person1 from '../images/person-1.png';
-import person2 from '../images/person-2.png';
-import person3 from '../images/person-3.png';
-import person4 from '../images/person-4.png';
-import person5 from '../images/person-5.png';
+import bg from '../../images/bg.png';
+import person1 from '../../images/person-1.png';
+import person2 from '../../images/person-2.png';
+import person3 from '../../images/person-3.png';
+import person4 from '../../images/person-4.png';
+import person5 from '../../images/person-5.png';
 
 const Container = styled.div`
   background: url(${bg});
@@ -24,16 +24,12 @@ const Wrapper = styled.div`
 `;
 
 interface Props {
-  setShowSlider: any;
-  setInitialNumber: any;
+  setShowSlider: Function;
+  setInitialNumber: Function;
   initialNumber: number;
 }
 
-const ChoosePage: FC<Props> = ({
-  setShowSlider,
-  setInitialNumber,
-  initialNumber,
-}) => {
+const ChoosePage: FC<Props> = ({ setShowSlider, setInitialNumber }) => {
   return (
     <Container>
       <Title />
